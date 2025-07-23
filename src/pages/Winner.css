@@ -1,0 +1,64 @@
+.winner-container {
+  height: 100vh;
+  background:  #011fa4 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(7, 7, 7);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+.score-box {
+  background: white;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.3);
+}
+
+.score-box h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #0c0e0e;
+  letter-spacing: 1px;
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #080808;
+}
+
+.winner-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #01ffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #01ffff;
+}
+
+.new-game-button {
+  background-color: #01ffff;
+  color: #00010a;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.new-game-button:hover {
+  background-color: #00ccff;
+}
