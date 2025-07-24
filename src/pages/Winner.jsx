@@ -1,4 +1,4 @@
-// src/pages/WinnerPage.jsx
+
 import { useLocation, Link } from 'react-router-dom';
 import './Winner.css';
 
@@ -6,7 +6,7 @@ function WinnerPage() {
   const location = useLocation();
   const { players, winner } = location.state || {};
 
-  // Fallback when page is visited directly without state
+  // Fallback when visiting the page directly without game data
   if (!players || !winner) {
     return (
       <div className="winner-container">
@@ -22,20 +22,23 @@ function WinnerPage() {
   return (
     <div className="winner-container">
       <div className="score-box">
-        <h2>Scores</h2>
+        <h2>Final Scores</h2>
         <div className="score-row">
-          <div>
-            <strong>{players[0].name}</strong>
-            <div className="score-value">{players[0].score}</div>
-          </div>
-          <div>
-            <strong>{players[1].name}</strong>
-            <div className="score-value">{players[1].score}</div>
-          </div>
+          {players.map((player, index) => (
+            <div key={index}>
+              <strong>{player.name}</strong>
+              <div className="score-value">{player.score}</div>
+            </div>
+          ))}
         </div>
       </div>
 
-      <h1 className="winner-text">{winner} Wins!</h1>
+      {/* Handle tie or winner message */}
+      {winner === "It's a tie!" ? (
+        <h1 className="winner-text">It's a Tie!</h1>
+      ) : (
+        <h1 className="winner-text"> {winner} Wins!</h1>
+      )}
 
       <Link to="/">
         <button className="new-game-button">New Game</button>
