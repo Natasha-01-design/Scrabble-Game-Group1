@@ -45,7 +45,7 @@ function Game() {
   const [wordScore, setWordScore] = useState(0);
   const [selectedTile, setSelectedTile] = useState(null);
   const [timeLeft, setTimeLeft] = useState(60);
-  const MAX_TURNS = 1.5;
+  const MAX_TURNS = 2;
 
   const currentPlayer = players[currentPlayerIndex];
 
@@ -74,7 +74,7 @@ function Game() {
     const newTurnCounts = [...turnCounts];
     newTurnCounts[currentPlayerIndex] += 1;
 
-    // Check if both players have completed their 5 turns
+    // Check if both players have completed their 2 turns
     if (newTurnCounts[0] >= MAX_TURNS && newTurnCounts[1] >= MAX_TURNS) {
       const [p1, p2] = players;
       const winner =
