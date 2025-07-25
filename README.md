@@ -1,12 +1,96 @@
-# React + Vite
+#  Scrabble Game (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Scrabble Game**, a web-based implementation of the classic word board game built using React. This game allows players to take turns forming words on a Scrabble board and scoring points based on tile values and board bonuses.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive 15x15 Scrabble board
+- Drag & click tile placement
+- Double Letter (DL), Triple Letter (TL), Double Word (DW), and Triple Word (TW) bonuses
+- Turn-based play for 2 players or player vs computer
+- Timer (60 seconds per turn)
+- Word validation using a dictionary
+- Score tracking and winner announcement
+- Responsive design
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (with Hooks)
+- JavaScript
+- CSS (custom styles)
+- React Router for page navigation
+
+## Folder Structure
+scrabble-game/
+│
+├── src/
+│ ├── components/
+| | ├── ScrabbleBoard.css
+│ │ ├── ScrabbleBoard.jsx
+│ │ ├── TileRack.jsx
+│ │ ├── WordValidator.jsx
+│ │ └── TileBag.js
+│ ├── pages/
+│ │ ├── Game.jsx
+│ │ └── WinnerPage.jsx
+│ │ └── WinnerPage.css
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+├── public/
+├── README.md
+└── package.json
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone git@github.com:Natasha-01-design/Scrabble-Game-Group1.git
+cd scrabble-game
+
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the App Locally
+bash
+Copy
+Edit
+npm run dev
+Open http://localhost:5173 to view the app in your browser.
+
+   Gameplay Rules
+Players take turns placing tiles to form valid words.
+
+The first word must pass through the center tile (*).
+
+Words must be valid and connect with existing tiles.
+
+Bonus tiles multiply word/letter values.
+
+After 5 turns each (or a set limit), the player with the highest score wins.
+
+Future Improvements
+Smart computer AI
+
+Save/load game state
+
+Multiplayer via WebSocket or Firebase
+
+Dark mode
+
+Improved mobile layout
+
+ License
+This project is open-source and available under the MIT License.
+
+yaml
+Copy
+Edit
+
+---
+
+
+
